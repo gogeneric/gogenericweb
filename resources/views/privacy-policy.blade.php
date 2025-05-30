@@ -1,13 +1,14 @@
 @extends('layouts.landing.app')
 
-@section('title',translate('messages.privacy_policy'))
+@section('title', translate('messages.privacy_policy'))
+<link rel="stylesheet" href="{{ asset('privacy.css') }}">
 
 @section('content')
     <!-- ==== Privacy Section ==== -->
     <section class="about-section py-5 position-relative">
         <div class=" container">
             <div class="section-header">
-                <h2 class="title">{{translate('messages.privacy_policy')}}</span></h2>
+                <h2 class="title">{{ translate('messages.privacy_policy') }}</span></h2>
             </div>
             <div class="privacy-wrapper">
                 <div class="item">
@@ -16,7 +17,7 @@
             </div>
         </div>
         <!-- Left Shape -->
-        <svg class="left--shape" width="172" height="555" viewBox="0 0 172 555" fill="none"
+        {{-- <svg class="left--shape" width="172" height="555" viewBox="0 0 172 555" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.19">
                 <g opacity="0.3">
@@ -356,8 +357,102 @@
                     <stop offset="1" stop-color="#22FF98" />
                 </linearGradient>
             </defs>
-        </svg>
+        </svg> --}}
+        <div>
+            <div class="privacy-policy">
+                <h1>1. Information We Collect</h1>
+                <p>We collect the following types of data based on user roles:</p>
 
+                <h2>a. Customers</h2>
+                <p>
+                    <strong>Personal Information:</strong> Name, contact number, email, delivery address<br>
+                    <strong>Health-related Information:</strong> Prescriptions, medicine preferences<br>
+                    <strong>Payment Information:</strong> UPI, credit/debit card details (via secure payment gateways)<br>
+                    <strong>Usage Data:</strong> Browsing history, app interactions, feedback
+                </p>
+
+                <h2>b. Pharmacy Sellers</h2>
+                <p>
+                    <strong>Business Information:</strong> Store name, address, license details (e.g., Drug License,
+                    GST)<br>
+                    <strong>Owner Information:</strong> Name, contact details, ID proof<br>
+                    <strong>Financial Data:</strong> Bank account details for settlements<br>
+                    <strong>Product Listings & Pricing Data</strong>
+                </p>
+
+                <h2>c. Delivery Partners</h2>
+                <p>
+                    <strong>Personal Information:</strong> Name, contact number, address<br>
+                    <strong>ID & Verification Documents:</strong> Aadhaar, driving license, background checks<br>
+                    <strong>Location Data:</strong> Real-time GPS tracking for delivery purposes
+                </p>
+
+                <h1>2. How We Use Your Information</h1>
+                <p>We use collected data to:</p>
+                <ul>
+                    <li>Facilitate seamless ordering, delivery, and communication</li>
+                    <li>Match customers with nearby pharmacies and delivery personnel</li>
+                    <li>Verify user identities and prevent fraud</li>
+                    <li>Improve our platform through usage analytics</li>
+                    <li>Comply with legal, regulatory, and financial requirements</li>
+                </ul>
+
+                <h1>3. Data Sharing & Disclosure</h1>
+                <p>We do not sell your personal data. However, we may share your information:</p>
+                <ul>
+                    <li>With verified partners (pharmacies, delivery agents) for service fulfilment</li>
+                    <li>With payment gateways and banking institutions for transactions</li>
+                    <li>With government or law enforcement agencies if legally required</li>
+                    <li>With service providers (e.g., cloud hosting, customer support tools) under strict confidentiality
+                        agreements</li>
+                </ul>
+
+                <h1>4. Data Retention</h1>
+                <p>We retain your data only for as long as necessary:</p>
+                <ul>
+                    <li>To provide services</li>
+                    <li>To comply with legal obligations</li>
+                    <li>For dispute resolution or fraud prevention</li>
+                </ul>
+                <p>Users can request account/data deletion by contacting us.</p>
+
+                <h1>5. Security Measures</h1>
+                <p>We implement industry-standard security practices including:</p>
+                <ul>
+                    <li>SSL encryption</li>
+                    <li>Role-based access control</li>
+                    <li>Secure cloud storage</li>
+                    <li>Regular vulnerability assessments</li>
+                </ul>
+                <p>However, no method of transmission is 100% secure. Users are advised to safeguard their login
+                    credentials.</p>
+
+                <h1>6. Your Rights</h1>
+                <p>As a user, you can:</p>
+                <ul>
+                    <li>Access or correct your data</li>
+                    <li>Withdraw consent</li>
+                    <li>Request deletion of personal data</li>
+                    <li>Lodge complaints regarding misuse of data</li>
+                </ul>
+                <p>To exercise these rights, contact our Grievance Officer (details below).</p>
+
+                <h1>7. Children’s Privacy</h1>
+                <p>Our services are not intended for individuals under 18. We do not knowingly collect data from minors.</p>
+
+                <h1>8. Third-party Links</h1>
+                <p>Our platform may contain links to third-party sites (e.g., payment gateways). We are not responsible for
+                    their privacy practices. Please review their privacy policies independently.</p>
+
+                <h1>9. Policy Updates</h1>
+                <p>We may update this Privacy Policy from time to time. Users will be notified of significant changes
+                    through the app or email.</p>
+
+                <h1>10. Contact Us</h1>
+                <p>If you have any questions or concerns about this Privacy Policy, please contact us.</p>
+            </div>
+
+        </div>
     </section>
     <!-- ==== Privacy Section ==== -->
 @endsection

@@ -1,22 +1,85 @@
 @extends('layouts.landing.app')
 
-@section('title',translate('messages.terms_and_condition'))
+@section('title', translate('messages.terms_and_condition'))
+<link rel="stylesheet" href="{{ asset('term.css') }}">
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('term.css') }}">
     <!-- ==== Privacy Section ==== -->
     <section class="about-section py-5 position-relative">
         <div class=" container">
-            <div class="section-header">
-                <h2 class="title">{{translate("messages.Terms_And")}} <span class="text--base">{{translate("messages.Conditions")}}</span></h2>
-            </div>
+            {{-- <div class="section-header">
+                <h2 class="title">{{ translate('messages.Terms_And') }} <span
+                        class="text--base">{{ translate('messages.Conditions') }}</span></h2>
+            </div> --}}
             <div class="privacy-wrapper">
-                <div class="item">
+                {{-- <div class="item">
                     {!! $data !!}
+                </div> --}}
+                <div class="terms-conditions">
+                    <h1>Terms and Conditions</h1>
+                    <p>Welcome to Go Generic Pharma. By accessing or using our website, mobile app, or services, you agree
+                        to comply with and be bound by the following Terms and Conditions (“Terms”). These Terms apply to
+                        all users, including Customers, Pharmacy Sellers, and Delivery Partners.<br>
+                        Please read them carefully.</p>
+
+                    <h1>1. Definitions</h1>
+                    <ul>
+                        <li>Platform: Refers to the Go Generic Pharma website, mobile app, and associated services.</li>
+                        <li>Customer: A user who browses, purchases, or orders medicines through the platform.</li>
+                        <li>Pharmacy Seller: A licensed pharmacy store registered to sell products via the platform.</li>
+                        <li>Delivery Partner: An individual or agency delivering products to customers.</li>
+                        <li>We/Us/Our: Refers to the team and legal entity behind Go Generic Pharma.</li>
+                    </ul>
+
+                    <h1>2. User Eligibility</h1>
+                    <ul>
+                        <li>Users must be at least 18 years old.</li>
+                        <li>Pharmacy Sellers must possess valid licenses (e.g., Drug License, GST) to sell pharmaceutical
+                            products.</li>
+                        <li>Delivery Partners must have valid identification and verification documents.</li>
+                    </ul>
+
+                    <h1>3. User Responsibilities</h1>
+                    <h2>Customers</h2>
+                    <ul>
+                        <li>Must upload valid prescriptions for prescription-only medicines.</li>
+                        <li>Agree to use the platform for lawful, personal purposes only.</li>
+                        <li>Must not misuse or tamper with the service.</li>
+                    </ul>
+
+                    <h2>Pharmacy Sellers</h2>
+                    <ul>
+                        <li>Must ensure product listings are accurate, licensed, and legally compliant.</li>
+                        <li>Are responsible for timely order confirmation, packaging, and stock accuracy.</li>
+                        <li>Must comply with all applicable pharmaceutical and taxation laws.</li>
+                    </ul>
+
+                    <h2>Delivery Partners</h2>
+                    <ul>
+                        <li>Must deliver orders on time and handle products safely.</li>
+                        <li>Must respect customer privacy and follow ethical conduct.</li>
+                        <li>Real-time location sharing may be required during delivery hours.</li>
+                    </ul>
+
+                    <hr>
+
+                    <h1>4. Order Process and Fulfilment</h1>
+                    <ul>
+                        <li>Go Generic Pharma acts as a digital facilitator connecting users; we do not own or sell any
+                            pharmaceutical products.</li>
+                        <li>All transactions are directly between the Customer and the Seller.</li>
+                        <li>Orders may be subject to availability, prescription verification, and Seller approval.</li>
+                    </ul>
+
+                    <hr>
+
                 </div>
+
             </div>
         </div>
         <!-- Left Shape -->
-        <svg class="left--shape" width="172" height="555" viewBox="0 0 172 555" fill="none"
+        {{-- <svg class="left--shape" width="172" height="555" viewBox="0 0 172 555" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.19">
                 <g opacity="0.3">
@@ -356,7 +419,7 @@
                     <stop offset="1" stop-color="#22FF98" />
                 </linearGradient>
             </defs>
-        </svg>
+        </svg> --}}
 
     </section>
     <!-- ==== Privacy Section ==== -->

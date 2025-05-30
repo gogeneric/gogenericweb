@@ -1,22 +1,22 @@
 @extends('layouts.landing.app')
 
-@section('title',translate('messages.Refund Policy'))
+@section('title', translate('messages.Refund Policy'))
 
 @section('content')
     <!-- ==== Privacy Section ==== -->
     <section class="about-section py-5 position-relative">
         <div class=" container">
             <div class="section-header">
-                <h2 class="title">{{translate('messages.Refund Policy')}}</span></h2>
+                <h2 class="title">{{ translate('messages.Refund Policy') }}</span></h2>
             </div>
             <div class="privacy-wrapper">
-                <div class="item">
+                {{-- <div class="item">
                     {!! $data !!}
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- Left Shape -->
-        <svg class="left--shape" width="172" height="555" viewBox="0 0 172 555" fill="none"
+        {{-- <svg class="left--shape" width="172" height="555" viewBox="0 0 172 555" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.19">
                 <g opacity="0.3">
@@ -356,8 +356,22 @@
                     <stop offset="1" stop-color="#22FF98" />
                 </linearGradient>
             </defs>
-        </svg>
+        </svg> --}}
+        <div>
+            <h1>Payments and Refunds</h1>
+            <p>• Payments are processed through secure third-party gateways.</p>
+            <p>• Refunds (if applicable) are governed by our separate <a href="#">Refund Policy</a>.</p>
+            <p>• Go Generic Pharma is not responsible for payment failures caused by third-party services.</p>
+        </div>
+        <style>
+            h1 {
+                font-size: 19px;
+            }
 
+            p {
+                font-size: 16px;
+            }
+        </style>
     </section>
     <!-- ==== Privacy Section ==== -->
 @endsection

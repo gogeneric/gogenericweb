@@ -13,7 +13,6 @@ $countryCode = strtolower($country ? $country->value : 'auto');
 
     <title>@yield('title')</title>
 
-    <link rel="stylesheet" href="{{ asset('assets/landing/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('public/assets/landing/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('public/assets/landing/css/customize-animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('public/assets/landing/css/odometer.css') }}" />
@@ -42,11 +41,6 @@ $countryCode = strtolower($country ? $country->value : 'auto');
 </head>
 
 <body>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, magnam. Accusamus itaque laboriosam
-            nostrum tenetur ea accusantium sint, provident facere. Pariatur at harum, vero esse totam sed temporibus
-            maxime adipisci?</p>
-    </div>
     @php($landing_page_text = \App\Models\BusinessSetting::where(['key' => 'landing_page_text'])->first())
     @php($landing_page_text = isset($landing_page_text->value) ? json_decode($landing_page_text->value, true) : null)
     @php($fixed_link = \App\Models\DataSetting::where(['key' => 'fixed_link', 'type' => 'admin_landing_page'])->first())
@@ -54,7 +48,7 @@ $countryCode = strtolower($country ? $country->value : 'auto');
     <!-- ==== Preloader ==== -->
     <div id="landing-loader"></div>
     <!-- ==== Preloader ==== -->
-    <!-- ==== Header Section Starts Here ==== -->
+    <!-- ==== Header Sectiok n Starts Here ==== -->
     <header>
         <div class="navbar-bottom">
             <div class="container">
@@ -185,10 +179,36 @@ $countryCode = strtolower($country ? $country->value : 'auto');
             </div>
         </div>
     </header>
+
     <!-- ==== Header Section Ends Here ==== -->
     @yield('content')
     <!-- ======= Footer Section ======= -->
+    <div style="padding: 20px; max-width: 800px; margin: auto;">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <p style="font-size: 28px; font-weight: bold;">Our Services</p>
+        </div>
 
+        <div style="margin-bottom: 20px;">
+            <div>
+                <p style="font-weight: bold; font-size: 20px;">Pharmaceutical Supplies</p>
+                <p>We provide high-quality generic medicines at affordable prices.</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <div>
+                <p style="font-weight: bold; font-size: 20px;">Custom Packaging</p>
+                <p>Customized packaging options for bulk orders and branding.</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <div>
+                <p style="font-weight: bold; font-size: 20px;">Doorstep Delivery</p>
+                <p>Fast and secure delivery across India at your convenience.</p>
+            </div>
+        </div>
+    </div>
     <footer>
         @php($fixed_newsletter_title = \App\Models\DataSetting::where(['type' => 'admin_landing_page', 'key' => 'fixed_newsletter_title'])->first())
         @php($fixed_newsletter_title = isset($fixed_newsletter_title->value) ? $fixed_newsletter_title->value : null)

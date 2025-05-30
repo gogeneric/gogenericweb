@@ -28,7 +28,12 @@ use App\Http\Controllers\SslCommerzPaymentController;
 |
 */
 
-
+Route::get('/whygo', function () {
+    return view('whygogeneric.whygo'); 
+})->name('whygo');
+Route::get('/services', function () {
+    return view('services.services'); 
+})->name('services');
 Route::post('/subscribeToTopic', [FirebaseController::class, 'subscribeToTopic']);
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('lang/{locale}', 'HomeController@lang')->name('lang');

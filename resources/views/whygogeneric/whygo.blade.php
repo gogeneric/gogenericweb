@@ -13,7 +13,6 @@ $countryCode = strtolower($country ? $country->value : 'auto');
 
     <title>@yield('title')</title>
 
-    <link rel="stylesheet" href="{{ asset('assets/landing/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('public/assets/landing/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('public/assets/landing/css/customize-animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('public/assets/landing/css/odometer.css') }}" />
@@ -42,11 +41,6 @@ $countryCode = strtolower($country ? $country->value : 'auto');
 </head>
 
 <body>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, magnam. Accusamus itaque laboriosam
-            nostrum tenetur ea accusantium sint, provident facere. Pariatur at harum, vero esse totam sed temporibus
-            maxime adipisci?</p>
-    </div>
     @php($landing_page_text = \App\Models\BusinessSetting::where(['key' => 'landing_page_text'])->first())
     @php($landing_page_text = isset($landing_page_text->value) ? json_decode($landing_page_text->value, true) : null)
     @php($fixed_link = \App\Models\DataSetting::where(['key' => 'fixed_link', 'type' => 'admin_landing_page'])->first())
@@ -185,6 +179,21 @@ $countryCode = strtolower($country ? $country->value : 'auto');
             </div>
         </div>
     </header>
+    <div>
+        <h1>Why Go Generic</h1>
+        <p>Go Generic Pharma is a pioneering digital platform committed to transforming how people access essential
+            medicines by connecting them directly with trusted local pharmacy retailers. Our mission is simple yet
+            powerful — to make affordable, high-quality generic medicines accessible to every Indian household while
+            empowering local pharmacies with the tools they need to thrive in the digital era.</p>
+        <h1>Our Values</h1>
+        <p>Accessibility: Healthcare is a right, not a privilege.
+            Empowerment: We equip local stores with digital tools to compete and grow.
+            Integrity: Every interaction on our platform is built on honesty, trust, and compliance.
+            Innovation: We continuously improve our technology to serve users better.
+            Join us in reshaping the future of pharmacy — one generic medicine at a time.
+
+        </p>
+    </div>
     <!-- ==== Header Section Ends Here ==== -->
     @yield('content')
     <!-- ======= Footer Section ======= -->
@@ -358,6 +367,7 @@ $countryCode = strtolower($country ? $country->value : 'auto');
                             </li>
                         </ul>
                     </div>
+
                 </div>
                 <div class="copyright text-center mt-3">
                     &copy; {{ \App\CentralLogics\Helpers::get_settings('footer_text') }}
