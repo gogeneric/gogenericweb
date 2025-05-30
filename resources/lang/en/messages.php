@@ -7545,4 +7545,6 @@ Smartly or Earn. ',
   'searching for deliverymen' => 'Searching for deliverymen',
   'please_select_a_valid_delivery_location_on_the_map' => 'Please select a valid delivery location on the map',
   'subscription_exist' => 'Subscription exist',
+  'Why GoGeneric' => 'Why GoGeneric',
+  'Our-Services' => 'Our-Services',
 );
