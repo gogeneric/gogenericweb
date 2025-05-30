@@ -54,6 +54,9 @@ $countryCode = strtolower($country ? $country->value : 'auto');
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, eligendi tenetur odit sunt vero est incidunt
                 magnam dolore exercitationem, recusandae at iure non deleniti fugit ullam molestias delectus aspernatur
                 ex.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, eligendi tenetur odit sunt vero est incidunt
+                magnam dolore exercitationem, recusandae at iure non deleniti fugit ullam molestias delectus aspernatur
+                ex.</p>
         </div>
         <div class="navbar-bottom">
             <div class="container">
